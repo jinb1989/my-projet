@@ -1,0 +1,81 @@
+/*header*/
+      .header span{
+							margin:0 auto;
+							padding:0;
+							display:inline-block;
+						 }
+		   .header div.header{
+								 width:100%;
+								 margin:0 auto;
+							 }
+		  .header #search_box{
+							 padding-left:65%;
+							 height:70px;
+							 position:relative;
+					 }
+			 .header span.search_box_span{
+							position:relative;
+					 }
+			.header span.search_box_button span{
+								position:absolute;
+								float:left;
+								top:-15px;
+								
+						 }
+			.header img.earthIcon{
+							 position:absolute;
+							 top:3px;
+							 left:100px;
+						 }
+			 .header span.switch{
+								position:relative;
+								left:90px;
+								top:3px;
+						 }
+			.header div.ise{
+				text-align:center;
+			 }
+			.header div.ise img.ise_img{
+							 position:relative;
+								 width:308px;
+								 height:68px;
+								 margin:10px 0;
+								 top:40px;
+							 }
+			.header div.naxigation{
+							 margin:30px auto;
+							 height:38px;
+							 padding-left:20%;
+						 }
+			 .header ul.naxigation_lest li{
+							 list-style:none;
+							margin:30px 50px;
+							 float:left;
+							position:relative;
+						 }
+			 .header ul.naxigation_lest li a{
+							text-decoration:none;
+							display:inline-block;
+							font-size:20px;
+							color:#5C5266;
+							font-weight:bold;
+						 }
+       .header a.naxigation_text{
+								 width:140px;
+							 }
+       .header span.login li{
+							list-style:none;
+							float:left;
+					 }
+			.header span.login{
+							 position:relative;
+								left:100px;
+								top:8px;
+						}
+			.header span.login ul li a{
+							 font-size:20px;
+							 color:#5C5266;
+								font-weight:bold;
+								text-decoration:none;
+							}
+				

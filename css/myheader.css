@@ -1,0 +1,141 @@
+/*header*/
+       body { 
+		    background-color: #f2f2f2;
+		    }
+  		   ul{
+			    margin:0;
+					padding:0;
+					list-style:none;
+			 }
+			 a{
+			   text-decoration:none;
+			 }
+    div.main{
+			 width:1000px;
+			 margin:30px auto;
+			 }
+    .main #logo{
+			   float:left;
+				
+			 } 
+	.main #input-top{
+			   float:left;
+				 margin-left:50px;
+				 width:410px;
+				 height:36px;
+				 border:1px solid #0aa1ed;
+			 }
+    .main #txtSearch{
+				  width:280px;
+					height:34px;
+					border:0;
+					outline:0;
+					padding-left:15px;
+					box-sizing:border-box;/*宽度包含内边距，改变框模型的计算模式*/
+					font-size:16px;
+				}
+	.main #input-top a.sort-search{
+				  color:#c3c3c3;
+					font-size:14px;
+					margin-left:10px;
+				}
+	.main #input-top i.caret{
+				   border:6px solid transparent;
+					 border-top-color:#bbb;
+					 margin-right:5px;
+					 float:right;
+					 margin-top:15px;
+				}
+	.main #input-top img.search-img{
+				float:right;
+				height:36px;
+				}
+	.main #list{
+			   float:right;
+			 }
+	.main #list li{
+			   float:left;
+               line-height:20px;
+			 }
+	.main #list li b{
+			    margin:0 8px;
+					color:#bbb;
+			 }
+	.main #list li a{
+			   font-size:16px;
+				 color:#bbb;
+			 }
+    .main #list li a:hover{
+			     color:#0aa1ed;
+			 }
+	.main .can b a:hover{
+	             color:#0aa1ed;
+	}
+	.main .can b a{
+	        font-size:16px;
+			color:#bbb;
+	}
+	.main .can{
+	   float:left;
+	}
+	.main span.switch{
+			   margin-left:50px;
+			 }
+	.main .menu {
+					width: 750px;
+					margin: 0 auto;
+					-webkit-perspective: 50px;
+					-moz-perspective: 50px;
+					-ms-perspective: 50px;
+					perspective: 50px;
+			}
+	.main .menu > li {
+					display: inline-block;
+					padding-top: 48px;
+					-webkit-transform-style: preserve-3d;
+					-moz-transform-style: preserve-3d;
+					-ms-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+			}
+	.main .menu > li > a {
+					position: relative;
+					display: block;
+					line-height: 36px;
+					color: #000;
+					font-weight: bold;
+					font-size: 20px;
+					padding: 0 20px;
+			}
+	.main .menu ul {
+					position: absolute;
+					text-align: left;
+					line-height: 40px;
+					font-size: 14px;
+					width: 200px;
+					background-color: #fff;
+					-webkit-transition: all 0.3s ease-in;
+					-moz-transition: all 0.3s ease-in;
+					-ms-transition: all 0.3s ease-in;
+					transition: all 0.3s ease-in;
+					-webkit-transform-origin: 0px 0px;
+					-moz-transform-origin: 0px 0px;
+					transform-origin: 0px 0px;
+					-webkit-transform: rotateX(-90deg);
+					-moz-transform: rotateX(-80deg);
+					transform: rotateX(-90deg);
+					-moz-backface-visibility: hidden;
+					-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+			}
+	.main .menu ul a {
+					display: block;
+					padding: 0 15px 0 10px;
+					color: #1a89c8;
+			}
+	.main .menu > li:hover ul {
+					display: block;
+					-webkit-transform: rotateX(0deg);
+					-moz-transform: rotateX(0deg);
+					-ms-transform: rotateX(0deg);
+					transform: rotateX(0deg);
+			}

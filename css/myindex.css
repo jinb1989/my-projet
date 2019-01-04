@@ -1,0 +1,89 @@
+/****************************myindex.css*******************************/
+	   body{
+			 margin:0 auto;
+			 background:#f1f1f1;
+			 }
+			 
+       div.index{
+						 margin:0 auto;
+					 }
+			div.subject{
+						 margin-left:-60px;
+						 margin-top:20px; 
+					 }
+			div.subject_right{
+						 float:left;
+					 }
+			div.subject_right img{
+						 transition:1s;
+					 }
+			div.subject_right img:hover{
+							 transform:scale(1.02);
+					 }
+			div.subject_right_button a img{
+						 margin-top:13%;
+						 margin-left:45%;
+					 }
+			div.subject_left{
+						 float:left;
+						margin-left:20px;
+						margin-right:30px;
+					 }
+      div.subject_left img{
+							transition:1s;
+					 }
+			div.subject_left img:hover{
+						 transform:scale(1.05);
+					 }
+			div.subject_left_button{
+						 text-align:right;
+						 margin:10px auto;
+					 }
+			div.subject_left_lower1{
+						 float:left;
+					 }
+			div.subject_left_lower2{
+						 float:right;
+					 }
+		div.subject_left_lower3 a img{
+						 margin-top:40px;
+					}
+		div.subject_left a img.tu1{
+						 width:600px;
+						 height:260px;
+					}
+		div.subject_left a img.tu2,.tu3{
+						 width:270px;
+						 height:230px;
+					}
+		div.subject_left a img.tu4{
+			   width:600px;
+				 height:293px;
+			}
+		div.subject_left a img.tu5{
+						 width:500px;
+						 height:570px;
+					}
+		div.subject_left a img{
+						 display:inline-block;
+					}
+		div.carousel-inner img{
+						width:1188px;
+						height:500px;
+					}
+		div.subj_ect{
+						margin-left:40px;
+					}
+    div.subject_left_lower3{
+						 padding-bottom:30px;
+					}
+		div.subject_right{
+						 position:relative;
+					}
+		div.subject_right_button{
+						 position:absolute;
+						 margin:10px auto;
+						 top:103%;
+						 left:190px;
+					}
+				

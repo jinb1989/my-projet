@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <style>
+
+	   #login{
+		    width:300px;
+				height:200px;
+				margin-left:20px;
+				position:relative;
+				background:#f1f1f1;
+		 }
+     #login h1,.margin_btn{
+		    text-align:center;
+		 }
+		 .margin_btn{
+		    margin-top:20px;
+		 }
+	</style>
+ </head>
+ <body>
+    <div id="login">
+		  <div><h1>用户登录</h1></div>
+     <div class="margin_left">
+	    用户名称:<input type="text"id="uname">
+		 </div>  
+		 <div class="margin_left">
+			 用户密码:<input type="password"id="upwd">
+		 </div>
+     <div class="margin_btn">
+	   <input type="button"value="登录"onclick="sendUname()">
+		 </div>
+		</div>
+	 <script  src="common.js"></script>
+	 <script>
+	     function sendUname(){
+		    var xhr=createXhr();
+			xhr.onreadystatechange=function(){
+			    if(xhr.readyState==4&&xhr.status==200){
+				    var result=xhr.responseText;
+					alert(result);
+				}
+			}
+			var user_name=$("uname").value;
+			var user_upwd=$("upwd").value;
+			xhr.open("post","/myPro/login",true);
+			//增加：设置post方法请求时的消息头
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var Msg="uname="+user_name+"&upwd="+user_upwd;
+			xhr.send(Msg);
+		 }
+	 </script>
+ </body>
+</html>

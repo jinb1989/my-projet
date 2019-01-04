@@ -1,0 +1,30 @@
+/******************************mynewest.css*****************************/
+						 div.newest{
+									 background:#B9A3CF;
+								 }
+			.newest div.news{
+							text-align:center;
+							color:#826E6E;
+					 }
+			 .newest div.dian,.year{
+							 text-align:center;
+							 }
+			 .newest div.dian p img{
+							 width:20px;
+							 height:20px;
+						 }
+			 .newest #year_width{
+							 width:155px;
+							 height:33px;
+						 }
+			 .newest div.year_list{
+							 text-align:center;
+							 margin-bottom:20px;
+						 }
+			 .newest div.year_list p{
+							 margin:10px auto;
+							 padding:10px 0;
+						 }
+       .newest div.year_list p a{
+								margin:0 10px;
+						 }

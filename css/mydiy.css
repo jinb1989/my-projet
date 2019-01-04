@@ -1,0 +1,49 @@
+/*diy特别定做*/
+       body{
+				  margin:0;
+				}
+		     div.customized{
+				   height:789px;
+					margin-left:20%
+				}
+				.diy div.customized div img{
+				   width:283px;
+					 height:304px;
+				}
+				.diy div.customized_size{
+						font-size:32px;
+						color:#666;
+						text-align:center;
+						padding:10px;
+					}
+				.diy div.customized_left,div.customized_right{
+							float:left;
+						}
+				.diy div.customized_center{
+							position:absolute;
+							margin-top:50px;
+							left:20%;
+					}
+        .diy div.customized_right_x{
+							width:555px;
+							height:335px;
+							padding:20% 10% 10% 10%;
+							font-size:20px;
+							color:#666;
+						}
+				.diy a{
+						 font-size:20px;
+						 padding:10px 20px;
+						 border:1px solid gray;
+						 text-decoration:none;
+						 color:#666;
+						}
+				.diy div.button{
+						 text-align: center;
+						 margin: 0 auto 170px;
+					}
+				.diy div.customized_size,div.customized{
+							 position:relative;
+							 background:#f1f1f1;
+							 margin:15px auto;
+						}

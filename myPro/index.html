@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="../css/base.css">	
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/myindex.css">
+	 <script src="../js/jquery-3.2.1.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		 <script src="../js/qs.min.js"></script>
+		 <script src="../js/vue.js"></script>
+    <title>Document</title>
+		 <style>
+          ul,li{
+					  margin:0;
+					  padding:0;
+					}
+		    	ul{
+					  list-style:none;
+					}
+					.item{
+					float:left;
+					padding:5px 10px;
+					border:1px solid #555;
+					color:#555;
+					cursor:pointer;
+					}
+					.item:not(.active):not(.disabled):hover{
+					  box-shadow:0 0 5px #555;
+					}
+					.item+.item{
+					   border-left:none;
+					}
+					.item.active{
+					  border:none;
+					  border-right:1px solid #555;
+					  background:lightBlue;
+					}
+					.item.disabled{
+					   background:#aaa;
+						 cursor:default;
+					}
+		 </style>
+  </head>
+  <body>
+     <!--1.引入头部内容-->
+    <header>
+        <iframe src="header.html" frameborder="0" class="my_header"></iframe>
+    </header>
+<!--2.网页主体-->
+    <div class="index">
+        <div class="container">
+          <div class="carousel" id="demo" data-ride="carousel">
+              <!--指示符-->
+               <ul class="carousel-indicators">
+                   <li class="active" data-target="#demo" data-slide-to="0"></li>
+                   <li data-target="#demo" data-slide-to="1"></li>
+                   <li data-target="#demo" data-slide-to="2"></li>
+                   <li data-target="#demo" data-slide-to="3"></li>
+               </ul>
+              <!--轮播图片-->
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="../img/banner.jpg" alt="">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="../img/33_b.jpg" alt="">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="../img/84w58PICTiM_1024.jpg" alt="">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="../img/@2o.jpg" alt="">
+                  </div>
+
+              </div>
+      </div>
+    	 <div class="subject">
+			    <div class="subj_ect">
+						<div class="subject_left">
+							<div>
+								<a href=""><img src="../img/weibo_link.png" alt=""class="tu1"></a>
+							</div>
+							<div class="subject_left_button">
+								<a href=""><img src="../img/button.png" alt=""></a>
+							</div>
+							<div class="subject_left_lower1">
+								<a href=""><img src="../img/ruby_home.jpg" alt=""class="tu2"></a>
+							</div>
+							<div class="subject_left_lower2">
+								<a href=""><img src="../img/Layer_27_1.png" alt=""class="tu3"></a>
+							</div>	
+							<div class="subject_left_lower3">
+								<a href=""><img src="../img/facebook_link.png" alt=""class="tu4"></a>
+							</div>
+						</div>
+						<div class="subject_right">
+							<div>
+								<a href=""><img src="../img/_o.png" alt=""class="tu5"></a>
+							</div>
+							<div class="subject_right_button">
+								<a href=""><img src="../img/button.png" alt=""></a>
+							</div>
+						</div>
+				  </div>
+    	 </div>
+			 <div id="app">
+					<ul>
+						<li class="item" @click="change(-1)" :class="prev_disabled">上一页</li>
+						<li v-for="i in pageCount" class="item" :class="pno==i?'active':''" >{{i}}</li>
+						<li class="item" @click="change(+1)" :class="next_disabled">下一页</li>
+						</ul>
+			 </div>
+			   
+			 
+    </div>
+  <!--3.引入底部-->
+  <footer>
+    <iframe src="footer.html" frameborder="0" class="my_footer"></iframe>
+  </footer>
+	<script>
+	    var vm=new Vue({
+			  el:"#app",
+				data:{
+				  pno:1,
+					pageCount:3,
+					prev_disabled:{"disabled":true},
+					next_disabled:{"disabled":false}
+				},
+        methods:{
+				  change(i){
+					 if(i==-1&&this.pno==1)
+					 return;
+					 if(i==1&&this.pno==this.pageCount)
+					 return;
+					 this.pno+=i;
+					 this.prev_disabled.disabled=this.pno==1;
+           this.next_disabled.disabled=this.pno==this.pageCount;
+					}
+				}
+			})
+	</script>
+	 </body>
+</html>

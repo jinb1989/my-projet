@@ -1,0 +1,52 @@
+/*myfooter*/
+     body{
+		   margin:0;
+		  }
+		  div.footer{
+         margin:0 auto;
+			   background:#0A0A24;
+				 padding-top:15px;
+				
+			}
+			.footer div.footer_lest{
+							padding-left:18%;
+						}
+      .footer div.footer_lest span.footer_text a{
+							margin:20px 30px;
+							text-decoration:none;
+							font-size:30px;
+							color:#fff;
+							}
+			.footer div.subscribe span a{
+							 font-size:30px;
+							 text-decoration:none;
+							 color:#000;
+						}
+			.footer div.subscribe{
+							 padding-left:20%;
+							 margin:20px 0;
+						}
+			.footer span.download{
+							float:right;
+						}
+			.footer div.copyright{
+							 font-size:20px;
+							 color:#fff;
+							 text-align:center;
+							 padding:20px auto;
+						}
+			.footer span.footer_text img{
+							width:12px;
+							height:12px;
+						}
+			.footer span.footer_text{
+							padding-top:20px;
+					}
+      
+      .footer span.fff_color{
+							color:#fff;
+							font-size:24px;
+					}
+      .footer .shape{
+							 text-align:center;
+						}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <style></style>
+ </head>
+ <body>
+       <p>
+	     用户名称：<input type="text"id="uname"onblur="checkUname()">
+		 <span id="showUname"></span>
+	   </p>
+	   <p>
+	     用户密码：<input type="password"id="upwd">
+	   </p>
+	   <p>
+	     用户邮箱：<input type="email"id="email">
+	   </p>
+	   <p>
+	     联系方式：<input type="text"id="phone">
+	   </p>
+	   <p>
+	     真实姓名：<input type="text"id="user_name">
+	   </p>
+	   <p>用户性别：
+	      <select id="gender">
+		      <option value="1">男</option>
+		      <option value="0">女</option>
+		      <option value="2">保密</option>
+		  </select>
+	   </p>
+	   <p><input type="button"value="注册"onclick="register()"></p>
+	   <script src="common.js"></script>
+	   <script>
+	   //声明全局变量用于控制是否允许注册
+	        var isRegister=false;
+            //检查用户名是否重复
+	        function checkUname(){
+			   var xhr=createXhr();
+			   xhr.onreadystatechange=function(){
+			      if(xhr.readyState==4&&xhr.status==200){
+				      var res=xhr.responseText;
+					  //alert(res);
+					  if(res=="1"){
+					    $("showUname").innerHTML="用户名已存在！";
+						isRegister=false;
+					  }else{
+					     $("showUname").innerHTML="用户名可用!";
+						 isRegister=true;
+					  }
+				  }
+			   }
+			   var uname=$("uname").value;//用于表单控件
+			   xhr.open("get","myPro/selectUname?uname="+uname,true);
+			   xhr.send(null);
+			}
+			function register(){
+			    if(isRegister==true){
+				   //异步注册
+				   var xhr=createXhr();
+				   xhr.onreadystatechange=function(){
+				       if(xhr.readyState==4&&xhr.status==200){
+					         var res=xhr.responseText;
+							 alert(res);
+					   }
+				   }
+				   xhr.open("post","/myPro/register",true);
+				   //增加消息头设置
+				   xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				   var uname=$("uname").value;
+				   var upwd=$("upwd").value;
+				   var email=$("email").value;
+				   var phone=$("phone").value;
+				   var user_name=$("user_name").value;
+				   var gender=$("gender").value;
+				   var msg="uname="+uname+"&upwd="+upwd+"&email="+email+"&phone="+phone+"&user_name="+user_name+"&gender="+gender;
+				   xhr.send(msg);
+				}else{
+				  alert("请检查注册信息");
+				}
+			}
+	   </script>
+ </body>
+</html>
